@@ -5,14 +5,19 @@ Can you fix the bug in this function
 */
 
 function getLargestNum(arr) {
-    let largestNum = 0;
-    for (let i = 0; i <= arr.length; i++) {
-      if (arr[i] > largestNum) {
-        largestNum = arr[i];
-      }
-    }
-    return largestNum;
+  if (arr.length === 0) {
+    return undefined; // Handle empty array case
   }
-  let arr = [1, 2, 3, 4, 5];
 
-  getLargestNum(arr)
+  let largestNum = arr[0]; // Initialize to the first element
+  for (let i = 1; i < arr.length; i++) {
+    // Loop condition corrected
+    if (arr[i] > largestNum) {
+      largestNum = arr[i];
+    }
+  }
+  return largestNum;
+}
+
+let arr = [1, 2, 3, 4, 10];
+console.log(getLargestNum(arr)); // Output: 10
