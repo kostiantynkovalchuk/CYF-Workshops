@@ -1,4 +1,4 @@
-import { Logo } from "./Logo";
+import Logo from "./Logo";
 import { BestPokemon } from "./BestPokemon";
 import { CaughtPokemon } from "./CaughtPokemon";
 const abilities = ["Anticipation", "Adaptability", "Run-Away"];
