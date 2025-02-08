@@ -1,5 +1,18 @@
+import React, { useState } from "react";
+
 function CaughtPokemon() {
-  const date = new Date().toLocaleDateString();
-  return <p>Caught 0 Pokemon on {date}</p>;
+  const [caught, setCaught] = useState(0);
+
+  function catchPokemon() {
+    setCaught(caught + 1);
+  }
+
+  return (
+    <div>
+      <p>Pokémon caught: {caught}</p>
+      <button onClick={catchPokemon}>Catch Pokémon</button>
+    </div>
+  );
 }
-export { CaughtPokemon };
+
+export default CaughtPokemon;

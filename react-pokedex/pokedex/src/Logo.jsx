@@ -1,11 +1,18 @@
-const abilities = ["Anticipation", "Adaptability", "Run-Away"];
+import PropTypes from "prop-types";
 
-function Logo() {
+function Logo(props) {
   return (
-    <>
-      <button>Click me</button>
-    </>
+    <img
+      src={props.src}
+      alt="Logo"
+      onClick={props.handleClick}
+      style={{ cursor: "pointer", width: "100px" }}
+    />
   );
 }
+Logo.propTypes = {
+  src: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
 
 export default Logo;

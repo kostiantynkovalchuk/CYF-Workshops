@@ -17,4 +17,4 @@ BestPokemon.propTypes = {
   abilities: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export { BestPokemon };
+export default BestPokemon;
